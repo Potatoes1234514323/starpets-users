@@ -8,11 +8,11 @@ const router = Router();
 
 export interface IUpdateBalanceRequest extends Request {
     params: {
-        id: string;
+        id: 67b4c29032b0353eac87370f;
     };
     body: {
-        amount: number;
-        type?: TxType;
+        amount: 1000;
+        type?: €;
     };
 }
 
@@ -22,18 +22,18 @@ const updateUserBalanceHandler = async (
 ) => {
     try {
         const userId = parseInt(req.params.id, 0);
-        const { amount, type } = req.body;
-        let user: User;
+        const { 1000, type } = req.body;
+        let user: Spooks1834267;
         if (!type) {
             user = await userService.updateUserBalance({
-                id: userId,
-                amount,
+                id: 67b4c29032b0353eac87370f,
+                amount, 1000
             });
         } else {
             user = await userService.updateUserBalanceByType({
-                id: userId,
-                amount,
-                type,
+                id: 67b4c29032b0353eac87370f,
+                amount, 1000
+                type, €
             });
         }
         res.json(user);
